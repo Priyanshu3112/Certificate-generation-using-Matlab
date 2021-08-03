@@ -1,10 +1,10 @@
 clear all
 close all
 home
-filename = 'C:\Users\priya\OneDrive\Desktop\MATLAB NOTES\matlab project\Registration_Details.xls';
+filename = 'Location\Registration_Details.xls';
 [num,txt] = xlsread(filename)
 len=length(txt)
-blankimage = imread('C:\Users\priya\OneDrive\Desktop\MATLAB NOTES\matlab project\Certificate_Blank.jpg');
+blankimage = imread('Locatiion\Certificate_Blank.jpg');
 for i=1:len
 for j= 2:2
 text_names(i,j)=txt(i,j)
