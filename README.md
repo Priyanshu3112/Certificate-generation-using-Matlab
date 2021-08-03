@@ -2,27 +2,3 @@
 Automatic Certificate Generation Using MATLAB
 
 
-clear all
-close all
-home
-filename = 'C:\Users\priya\OneDrive\Desktop\MATLAB NOTES\matlab project\Registration_Details.xls';
-[num,txt] = xlsread(filename)
-len=length(txt)
-blankimage = imread('C:\Users\priya\OneDrive\Desktop\MATLAB NOTES\matlab project\Certificate_Blank.jpg');
-for i=1:len
-for j= 2:2
-text_names(i,j)=txt(i,j)
-end
-end
-for i=1:len
-for j= 3:3
-text_topic(i,j)=txt(i,j)
-end
-end
-for i=2:len
-text_all=[text_names(i,2) text_topic(i,3)]
-position = [100 258;120 416];
-RGB = insertText(blankimage,position,text_all,'FontSize',22,'BoxOpacity',0);
-figure
-imshow(RGB)
-end
